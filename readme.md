@@ -53,6 +53,7 @@ _For more examples and usage, please refer to the [Wiki][wiki]._
 
 * 1.2.1
     * REMOVE: Removed `/update` endpoint for payments
+    * ADD: Added response body for `/invoice` endpoint for `POST` request
 * 1.2
     * ADD: Added monolog for logging
     * ADD: Added flysystem for file management
