@@ -57,6 +57,8 @@ class InvoiceController extends Controller {
 
             $this->logger->error($ex->getMessage());
 
+            http_response_code(500);
+
             echo json_encode([
                 "message" => "Something went wrong. Please try again."
             ]);
@@ -98,6 +100,8 @@ class InvoiceController extends Controller {
 
             $this->logger->error($ex->getMessage());
 
+            http_response_code(500);
+
             echo json_encode([
                 "message" => "Something went wrong. Please try again."
             ]);
@@ -138,9 +142,17 @@ class InvoiceController extends Controller {
             $invoices[] = $body;
             $this->filesystem->write('invoices.json', json_encode($invoices));
 
+            echo json_encode($body);
+
         } catch (Exception $ex) {
 
             $this->logger->error($ex->getMessage());
+
+            http_response_code(500);
+
+            echo json_encode([
+                "message" => "Something went wrong. Please try again."
+            ]);
         }
     }
 }
