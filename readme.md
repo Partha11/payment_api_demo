@@ -51,6 +51,8 @@ _For more examples and usage, please refer to the [Wiki][wiki]._
 
 ## Release History
 
+* 1.2.1
+    * REMOVE: Removed `/update` endpoint for payments
 * 1.2
     * ADD: Added monolog for logging
     * ADD: Added flysystem for file management

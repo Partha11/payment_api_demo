@@ -20,8 +20,6 @@ $dispatcher = simpleDispatcher(function (FastRoute\RouteCollector $routes) {
     $routes->addRoute('GET', '/invoices', [InvoiceController::class, 'index']);
     $routes->addRoute('GET', '/invoices/{id}', [InvoiceController::class, 'find']);
 
-    $routes->addRoute('PUT', '/invoices', [InvoiceController::class, 'update']);
-
     $routes->addRoute('POST', '/invoices', [InvoiceController::class, 'create']);
     $routes->addRoute('POST', '/payments', [PaymentController::class, 'create']);
 });
